@@ -106,6 +106,22 @@ body{
     height:180px;
     object-fit:cover;
 }
+/* Scroll fix for photo slide (mobile friendly) */
+.slide.scrollable{
+    max-height:80vh;
+    overflow-y:auto;
+    padding-bottom:40px;
+}
+
+/* Smooth mobile scrolling */
+.slide.scrollable::-webkit-scrollbar{
+    width:6px;
+}
+.slide.scrollable::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,0.4);
+    border-radius:10px;
+}
+
 @keyframes float{
     0%,100%{transform:translateY(0);}
     50%{transform:translateY(-12px);}
@@ -176,8 +192,8 @@ body{
 </div>
 
 <!-- Slide 4 -->
-<div class="slide">
-    <h2>Our Beautiful Memories 💞</h2>
+<div class="slide scrollable">
+    <h2>Beautiful Snapshots 💞</h2>
     <div class="cards">
         <div class="card"><img src="photos/1.jpg"></div>
         <div class="card"><img src="photos/2.jpg"></div>
@@ -242,7 +258,7 @@ function typeText(id,text){
 
 /* EDIT MESSAGES HERE */
 typeText("t1","Hi meri babu ❤️\nThis New Year is special because it has YOU in it...");
-typeText("t2","Radha 💖 tum meri zindagi ka sabse khoobsurat hissa ho.\nHar saal, har pal, bas aap chahiye.\nChahe jitna bhi hmko pyar krne se mna kr lijiye ya dur kriye hm utnee hi aape pass hote jaenge, kya kre pyar hi krte hai aapse itna, nhi jaa skta aapko chor ke kbhi.\n Aur aap n har chiz se compare krna bnd kr dijiye hm n kisi ke jaise nhi hai, hm bs hm hai aur aapke hai...\n Bs ye smjh lijiye ki mai wo hu jo aaapka hu, mai wo hu jo apke liye sb kuch krunga.\n Aur sbse importnat ki aapko chor ke kbhi nhi jaunga " );
+typeText("t2","Radha 💖 aap meri zindagi ka sabse khoobsurat hissa ho.\nHar saal, har pal, bas aap chahiye.\nChahe jitna bhi hmko pyar krne se mna kr lijiye ya dur kriye hm utnee hi aape pass hote jaenge, kya kre pyar hi krte hai aapse itna, nhi jaa skta aapko chor ke kbhi.\n Aur aap n har chiz se compare krna bnd kr dijiye hm n kisi ke jaise nhi hai, hm bs hm hai aur aapke hai...\n Bs ye smjh lijiye ki mai wo hu jo aaapka hu, mai wo hu jo apke liye sb kuch krunga.\n Aur sbse importnat ki aapko chor ke kbhi nhi jaunga " );
 typeText("t3","2026 ho ya koi bhi saal...\nMain har smile, har dream, har moment aapke saath jeena chahta hoon 💕\nYe saal ka best thing happend to me was the right swipe jha mujhe aap mili, aur aaj aap mere liye sb kuch hai.\nSach me bhut pyar krte hai aapse babu wada kriye n aap kbhi chor ke nhi jaengi.\n I just want your presence in my life, nhi hu mai aapke sath kisi matlab se, just a pure love that is for you only.\n May God bless you always and you get what you want in your life at early as possible. \nTb tk ke liye keep working hard and make sure to remember me anytime, avilable for you always.☺️");
 
 /* Hearts & sparkles */
