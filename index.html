@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year Meri Babu ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#ff4e8a,#ff9a9e,#fad0c4,#fbc2eb);
+    background-size:400% 400%;
+    animation:bgMove 10s infinite alternate;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+@keyframes bgMove{
+    0%{background-position:0% 50%}
+    100%{background-position:100% 50%}
+}
+
+.container{
+    width:92%;
+    max-width:900px;
+    text-align:center;
+    position:relative;
+}
+
+.slide{
+    display:none;
+    animation:fade 1s ease;
+}
+.slide.active{display:block;}
+
+@keyframes fade{
+    from{opacity:0;transform:translateY(25px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+.text{
+    font-size:1.2rem;
+    min-height:140px;
+    line-height:1.8;
+}
+
+/* Name glow */
+.name{
+    font-family:'Great Vibes',cursive;
+    font-size:2.6rem;
+    color:#fff;
+    text-shadow:0 0 15px #fff,0 0 30px #ff69b4;
+    animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+    from{text-shadow:0 0 10px #fff,0 0 20px #ff69b4;}
+    to{text-shadow:0 0 20px #fff,0 0 40px #ff1493;}
+}
+
+.next-btn{
+    margin-top:30px;
+    padding:14px 36px;
+    font-size:1rem;
+    border:none;
+    border-radius:40px;
+    background:white;
+    color:#ff4e8a;
+    cursor:pointer;
+    transition:0.3s;
+}
+.next-btn:hover{transform:scale(1.12);}
+
+/* New Year */
+.newyear{
+    font-family:'Great Vibes',cursive;
+    font-size:3.5rem;
+    animation:pulse 2s infinite;
+    text-shadow:0 0 25px rgba(255,255,255,0.9);
+}
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.07);}
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
+.card{
+    background:rgba(255,255,255,0.2);
+    border-radius:22px;
+    overflow:hidden;
+    animation:float 3s ease-in-out infinite;
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+/* Hearts & sparkles */
+.heart,.spark{
+    position:absolute;
+    bottom:-30px;
+    animation:rise 7s linear infinite;
+    opacity:0.85;
+}
+.spark{font-size:12px;}
+@keyframes rise{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-120vh);opacity:0;}
+}
+
+/* Confetti */
+.confetti{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:white;
+    animation:fall 4s linear infinite;
+}
+@keyframes fall{
+    from{transform:translateY(-10vh);}
+    to{transform:translateY(110vh);}
+}
+
+/* Mobile */
+@media(max-width:600px){
+    .text{font-size:1.05rem;}
+    .newyear{font-size:2.7rem;}
+    .name{font-size:2.2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<!-- Slide 1 -->
+<div class="slide active">
+    <div class="text" id="t1"></div>
+    <button class="next-btn" onclick="startLove()">Start ❤️</button>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+    <div class="text" id="t2"></div>
+    <button class="next-btn" onclick="nextSlide()">Next 💕</button>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+    <div class="newyear">Happy New Year 2026 ✨</div>
+    <p class="name">‎ </p>
+    <p class="name">Radha 💖 Meri babu</p>
+    <button class="next-btn" onclick="nextSlide()">Next 🎉</button>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+    <h2>Our Beautiful Memories 💞</h2>
+    <div class="cards">
+        <div class="card"><img src="photos/1.jpg"></div>
+        <div class="card"><img src="photos/2.jpg"></div>
+        <div class="card"><img src="photos/3.jpg"></div>
+        <div class="card"><img src="photos/4.jpg"></div>
+        <div class="card"><img src="photos/5.jpg"></div>
+        <div class="card"><img src="photos/6.jpg"></div>
+        <div class="card"><img src="photos/7.jpg"></div>
+        <div class="card"><img src="photos/8.jpg"></div>
+        <div class="card"><img src="photos/9.jpg"></div>
+        <div class="card"><img src="photos/10.jpg"></div>
+        <div class="card"><img src="photos/11.jpg"></div>
+        <div class="card"><img src="photos/12.jpg"></div>
+        >                           
+    
+    </div>
+    <button class="next-btn" onclick="nextSlide()">Next 💓</button>
+</div>
+
+<!-- Slide 5 -->
+<div class="slide">
+    <div class="text" id="t3"></div>
+    <button class="next-btn" onclick="nextSlide()">Final ❤️</button>
+</div>
+
+<!-- Slide 6 -->
+<div class="slide">
+    <h1 class="newyear">Thank You Meri Babu ❤️</h1>
+    <p class="name">‎ </p>
+    <p class="name">Forever Yours 💕</p>
+    <p class="name">‎ </p>
+    <h1 class="newyear">I LOVE YOU ❤️</h1>
+</div>
+
+</div>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let current=0;
+
+function startLove(){
+    document.getElementById("bgMusic").play();
+    nextSlide();
+    launchConfetti();
+}
+
+function nextSlide(){
+    slides[current].classList.remove('active');
+    current++;
+    slides[current].classList.add('active');
+}
+
+/* Typing Effect */
+function typeText(id,text){
+    let i=0,el=document.getElementById(id);
+    let timer=setInterval(()=>{
+        el.innerHTML+=text.charAt(i);
+        i++;
+        if(i>=text.length) clearInterval(timer);
+    },45);
+}
+
+/* EDIT MESSAGES HERE */
+typeText("t1","Hi meri babu ❤️\nThis New Year is special because it has YOU in it...");
+typeText("t2","Radha 💖 tum meri zindagi ka sabse khoobsurat hissa ho.\nHar saal, har pal, bas aap chahiye.\nChahe jitna bhi hmko pyar krne se mna kr lijiye ya dur kriye hm utnee hi aape pass hote jaenge, kya kre pyar hi krte hai aapse itna, nhi jaa skta aapko chor ke kbhi.\n Aur aap n har chiz se compare krna bnd kr dijiye hm n kisi ke jaise nhi hai, hm bs hm hai aur aapke hai...\n Bs ye smjh lijiye ki mai wo hu jo aaapka hu, mai wo hu jo apke liye sb kuch krunga.\n Aur sbse importnat ki aapko chor ke kbhi nhi jaunga " );
+typeText("t3","2026 ho ya koi bhi saal...\nMain har smile, har dream, har moment aapke saath jeena chahta hoon 💕\nYe saal ka best thing happend to me was the right swipe jha mujhe aap mili, aur aaj aap mere liye sb kuch hai.\nSach me bhut pyar krte hai aapse babu wada kriye n aap kbhi chor ke nhi jaengi.\n I just want your presence in my life, nhi hu mai aapke sath kisi matlab se, just a pure love that is for you only.\n May God bless you always and you get what you want in your life at early as possible. \nTb tk ke liye keep working hard and make sure to remember me anytime, avilable for you always.☺️");
+
+/* Hearts & sparkles */
+setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"%";
+    h.style.fontSize=(14+Math.random()*18)+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+},550);
+
+setInterval(()=>{
+    let s=document.createElement("div");
+    s.className="spark";
+    s.innerHTML="✨";
+    s.style.left=Math.random()*100+"%";
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),7000);
+},850);
+
+/* Confetti */
+function launchConfetti(){
+    for(let i=0;i<40;i++){
+        let c=document.createElement("div");
+        c.className="confetti";
+        c.style.left=Math.random()*100+"%";
+        c.style.background=`hsl(${Math.random()*360},100%,70%)`;
+        c.style.animationDuration=(3+Math.random()*2)+"s";
+        document.body.appendChild(c);
+        setTimeout(()=>c.remove(),5000);
+    }
+}
+</script>
+
+</body>
+</html>
